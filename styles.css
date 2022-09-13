@@ -34,7 +34,7 @@ main article{
 
 header{
     grid-area: nav;
-    background-color: white;
+    background-image: linear-gradient(to left, orange, white);
 }
 
 nav{
@@ -55,10 +55,15 @@ nav ul{
 
 nav ul li{
     padding: 2%;
+    transition: transform 1s;
 }
 
-nav a{
+nav ul li a{
     font-size: large;
+}
+
+nav ul li:hover{
+    transform: scale(1.5, 1.5);
 }
 
 nav input{
@@ -69,7 +74,7 @@ nav input{
 
 footer{
     grid-area: footer;
-    background-color: white;
+    background-image: linear-gradient(to right, white, orange);
     border: solid;
 }
 
@@ -78,6 +83,14 @@ footer ul{
     padding-inline: 1%;
     column-count: 2;
     text-align: center;
+}
+
+footer ul li{
+    transition: all 1s;
+}
+
+footer ul li:hover{
+    transform: scale(1.5, 1.5);
 }
 
 .index{
@@ -96,6 +109,7 @@ footer ul{
 }
 
 .foro article{
+    background-image: radial-gradient(white, orange);
     display: flex;
     flex-direction: column;
 }
@@ -106,20 +120,30 @@ footer ul{
     margin: 1%;
 }
 
-.artForo{
+.foro article div .artForo{
     display: flex;
+    background-color: white;
     flex-direction: column;
     margin: 1%;
+    padding: 1%;
+}
+
+.foro main article div div{
+    background-color: white;
+    margin: 2%;
+    padding: 2%;
 }
 
 .foro article section{
+    background-color: white;
     text-align: center;
+    margin: 2%;
 }
 
 .pag{
     display: block;
     grid-area: pag;
-    background-color: white;
+    background-image: linear-gradient(to right, white, orange);
     height: fit-content;
     padding: 1%;
     border: solid;
@@ -138,7 +162,13 @@ footer ul{
 }
 
 .pag li{
+    margin: 1%;
     list-style: disc;
+    transition: transform 0.5s;
+}
+
+.pag li:hover{
+    transform: scale(1.1, 1.1);
 }
 
 @media screen and (min-width: 800px) {
@@ -173,7 +203,7 @@ footer ul{
     
     footer ul{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         padding-inline: 1%;
     }
     
@@ -190,15 +220,18 @@ footer ul{
 }
 
 article{
-    background-color: white;
     border: solid;
     padding: 1%;
     margin: 2%;
 }
 
+.index article{
+    background-image: radial-gradient(white, orange);
+}
+
 main section h2{
     display: inline-block;
-    background-color: white;
+    background-image: radial-gradient(orange, white);
     font-size: xx-large;
     border: solid;
 }
