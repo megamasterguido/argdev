@@ -1,0 +1,204 @@
+*{
+    font-family: 'Noto Sans';
+}
+
+body{
+    display: grid;
+    margin: 1%;
+    background-image: url("https://blog.codecentric.de/files/2019/09/lambda-39473_640-1.png");
+    background-size: 10%;
+    background-attachment: fixed;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+main{
+    grid-area: main;
+    margin: 1%;
+}
+
+main article{
+    text-align: justify;
+}
+
+header{
+    grid-area: nav;
+    background-color: white;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid;
+}
+
+nav img{
+    width: 60%;
+    padding-left: 0%;
+}
+
+nav ul{
+    padding-left: 0%;
+}
+
+nav ul li{
+    padding: 2%;
+}
+
+nav a{
+    font-size: large;
+}
+
+nav input{
+    width: 20%;
+    height: auto;
+    margin: 1%;
+}
+
+footer{
+    grid-area: footer;
+    background-color: white;
+    border: solid;
+}
+
+footer ul{
+    display: list-item;
+    padding-inline: 1%;
+    column-count: 2;
+    text-align: center;
+}
+
+.index{
+    grid-template-areas: 
+    'nav'
+    "pag"
+    'main'
+    'footer';
+}
+
+.foro{
+    grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+}
+
+.foro article{
+    display: flex;
+    flex-direction: column;
+}
+
+.foro article div{
+    display: flex;
+    align-items: center;
+    margin: 1%;
+}
+
+.artForo{
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+}
+
+.foro article section{
+    text-align: center;
+}
+
+.pag{
+    display: block;
+    grid-area: pag;
+    background-color: white;
+    height: fit-content;
+    padding: 1%;
+    border: solid;
+    margin-inline: 3%;
+    margin-top: 2%;
+    width: max-content;
+}
+
+.pag h1{
+    font-size: large;
+}
+
+.pag ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.pag li{
+    list-style: disc;
+}
+
+@media screen and (min-width: 800px) {
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    nav img{
+        width: 50%;
+    }
+    
+    nav ul{
+        justify-content: space-between;
+        padding-inline: 1%;
+        width: 50%;
+    }
+    
+    nav a{
+        font-size: large;
+    }
+    
+    nav input{
+        margin: 1%;
+    }
+    
+    footer{
+        grid-area: footer;
+        background-color: white;
+    }
+    
+    footer ul{
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 1%;
+    }
+    
+    .index{
+        grid-template-areas: 
+        'nav nav'
+        'main pag'
+        'footer footer';
+    }
+
+    .pag{
+        margin-top: 15%;
+    }
+}
+
+article{
+    background-color: white;
+    border: solid;
+    padding: 1%;
+    margin: 2%;
+}
+
+main section h2{
+    display: inline-block;
+    background-color: white;
+    font-size: xx-large;
+    border: solid;
+}
