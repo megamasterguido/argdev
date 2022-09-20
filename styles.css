@@ -39,11 +39,17 @@ header{
 nav{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+
 }
 
 nav img{
-    width: 50%;
+    width: 100px;
+}
+
+nav a img:active{
+    background-color: lightgray;
 }
 
 .navPC{
@@ -55,19 +61,33 @@ nav img{
 }
 
 .navMobile .dropdown button{
-    background-color: gray;
+    background-color: black;
     height: 100%;
+    width: 120px;
+    height: 60px;
+    font-size: xx-large;
 }
 
-.navMobile .dropdown button:hover + .dropdown-menu{
+.navMobile .dropdown button:active{
+    background-color: lightgray;
+}
+
+.navMobile .dropdown-menu{
+    background-color: gray;
+    color: black;
+}
+
+.dropdown-menu a{
     display: block;
+    margin: 1%;
+    padding: 1%;
+    font-size: x-large;
 }
 
 .busqueda{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-right: 100px;
 }
 
 .busqueda__icono{
@@ -77,6 +97,7 @@ nav img{
 .busqueda__box{
     height: 40px;
     background-color: none;
+    color: black;
 }
 
 footer{
@@ -88,6 +109,11 @@ footer ul{
     display: list-item;
     padding-inline: 1%;
     column-count: 2;
+    font-size: larger;
+}
+
+footer a:visited{
+    color: blue;
 }
 
 .index{
@@ -111,6 +137,10 @@ footer ul{
 .foro article{
     display: flex;
     flex-direction: column;
+    margin: 2%;
+    padding: 2%;
+    border: dotted;
+    border-color: darkgray;
 }
 
 .foro article div{
@@ -121,22 +151,46 @@ footer ul{
 
 .foro article div .artForo{
     display: flex;
-    background-color: gray;
     flex-direction: column;
     margin: 1%;
     padding: 1%;
-}
-
-.foro main article div div{
+    height: 200px;
+    overflow-y: scroll;
     background-color: gray;
-    margin: 2%;
-    padding: 2%;
 }
 
 .foro .comentario{
-    background-color: darkgray;
+    display: block;
+    text-justify: distribute;
+    height: 100px;
+    padding: 1%;
+    overflow-y: scroll;
+    background-color: gray;
+}
+
+.comentario h2{
     text-align: center;
-    margin: 2%;
+}
+
+.foro .artImgs{
+    display: flex;
+    flex-direction: column;
+}
+
+.foro .autor img{
+    width: 60px;
+    border: dotted;
+    border-color: darkgray;
+}
+
+.foro .autor a{
+    text-align: center;
+}
+
+.foro .artPrev img{
+    width: 120px;
+    border: dotted;
+    border-color: darkgray;
 }
 
 .pag{
@@ -144,13 +198,13 @@ footer ul{
     grid-area: pag;
     height: fit-content;
     padding: 1%;
+    margin: 1%;
     background-color: gray;
-    width: max-content;
 }
 
 .pag h1{
     text-align: center;
-    font-size: large;
+    font-size: x-large;
 }
 
 .pag ul{
@@ -161,6 +215,11 @@ footer ul{
 .pag li{
     margin: 1%;
     list-style: disc;
+    font-size: x-large;
+}
+
+.pag a:visited{
+    color: blue;
 }
 
 article{
@@ -168,7 +227,7 @@ article{
     margin: 2%;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 992px) {
 
     .navMobile{
         display: none;
@@ -177,10 +236,6 @@ article{
     .navPC{
         display: flex;
         flex-direction: row;
-    }
-    
-    nav img{
-        width: 50%;
     }
 
     .navPC ul{
@@ -256,7 +311,19 @@ article{
         "main"
         "footer";
     }
+
+    .foro .artImgs{
+        flex-direction: row;
+    }
+
+    .foro .autor img{
+        width: 100px;
+    }
     
+    .foro .artPrev img{
+        width: 250px;
+    }
+
     .pag{
         margin-top: 15%;
     }
