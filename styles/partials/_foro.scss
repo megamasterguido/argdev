@@ -1,0 +1,96 @@
+.foro{
+    background-color: rgb(30, 30, 30);
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+
+    article{
+        display: flex;
+        flex-direction: column;
+        margin: 2%;
+        padding: 2%;
+        border: dotted;
+        border-color: darkgray;
+
+        div{
+            display: flex;
+            align-items: center;
+            margin: 1%;
+
+            .artForo{
+                display: flex;
+                flex-direction: column;
+                margin: 1%;
+                padding: 1%;
+                height: 200px;
+                overflow-y: scroll;
+                background-color: gray;
+            }
+        }
+    }
+
+    .comentario{
+        display: block;
+        text-justify: distribute;
+        height: 100px;
+        padding: 1%;
+        overflow-y: scroll;
+        background-color: gray;
+    
+        h2{
+            text-align: center;
+        }
+    }
+
+    .artImgs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .autor{
+        img{
+            width: 60px;
+            border: dotted;
+            border-color: darkgray;
+        }
+
+        a{
+            text-align: center;
+        }
+    }
+
+    .artPrev{
+        img{
+            width: 120px;
+            border: dotted;
+            border-color: darkgray;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .foro{
+        grid-template-areas: 
+        "nav"
+        "main"
+        "footer";
+
+        .artImgs{
+            flex-direction: row;
+        }
+        
+        .autor{
+            img{
+                width: 100px;
+            }
+        }
+
+        .artPrev{
+            img{
+                width: 250px;
+            }  
+        }
+    }
+}

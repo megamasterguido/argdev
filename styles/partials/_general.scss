@@ -1,0 +1,50 @@
+
+*{
+    font-family: 'Noto Sans';
+    color: whitesmoke;
+}
+
+body{
+    background-color: rgb(30, 30, 30);
+}
+
+a{
+    text-decoration: none;
+    color: yellow;
+}
+
+li{
+    list-style: none;
+    width: fit-content;
+}
+
+main{
+    grid-area: main;
+    margin: 2%;
+}
+
+main article{
+    text-align: justify;
+}
+
+main section h2{
+    display: inline-block;
+    font-size: xx-large;
+}
+
+article{
+    padding: 1%;
+    margin: 2%;
+}
+
+@media screen and (min-width: 992px) {
+    .amarillo{
+        color: yellow;
+        transition: all 1s;
+        text-align: center;
+    }
+
+    .amarillo:hover{
+        color: orange;
+    }
+}

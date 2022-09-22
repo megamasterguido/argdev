@@ -1,0 +1,108 @@
+header{
+    grid-area: nav;
+    background-color: gray;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    img{
+        width: 100px;
+    }
+
+    a{
+        img{
+            &:active{
+                background-color: lightgray;
+            }
+        }
+    }    
+
+}
+
+.navPC{
+    display: none;
+}
+
+.navMobile{
+    display: flex;
+
+    .dropdown{
+        button{
+            background-color: black;
+            height: 100%;
+            width: 120px;
+            height: 60px;
+            font-size: xx-large;
+
+            &:active{
+                background-color: lightgray;
+            }
+        }
+    }
+
+    .dropdown-menu{
+        background-color: gray;
+        color: black;
+    }
+
+    a{
+        display: block;
+        margin: 1%;
+        padding: 1%;
+        font-size: x-large;
+    }
+}
+
+.busqueda{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    .busqueda__icono{
+        width: 30px;
+    }
+    
+    .busqueda__box{
+        height: 40px;
+        background-color: none;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .navMobile{
+        display: none;
+    }
+
+    .navPC{
+        display: flex;
+        flex-direction: row;
+
+        ul{
+            display: flex;
+            flex-direction: row;
+
+            li{
+                display: flex;
+                transition: all 1s;
+                padding: 2%;
+
+                &:hover{
+                    transform: scale(1.1, 1.1);
+                }
+
+                .amarillo{
+                    width: max-content;
+                    font-size: x-large;
+                }
+            }
+        }
+    }
+
+}
+
