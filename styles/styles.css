@@ -96,9 +96,6 @@ footer ul {
        column-count: 2;
   font-size: larger;
 }
-footer ul a:visited {
-  color: darksalmon;
-}
 
 @media screen and (min-width: 992px) {
   footer {
@@ -145,7 +142,7 @@ footer ul a:visited {
   font-size: x-large;
 }
 .pag ul li a:visited {
-  color: darksalmon;
+  color: red;
 }
 
 @media screen and (min-width: 992px) {
@@ -173,14 +170,14 @@ footer ul a:visited {
   background-color: rgb(30, 30, 30);
   display: grid;
   grid-template-areas: "nav" "main" "footer";
+  border-color: darkgray;
 }
 .foro article {
   display: flex;
   flex-direction: column;
   margin: 2%;
   padding: 2%;
-  border: dotted;
-  border-color: darkgray;
+  border-bottom: dotted;
 }
 .foro article div {
   display: flex;
@@ -194,7 +191,7 @@ footer ul a:visited {
   padding: 1%;
   height: 200px;
   overflow-y: scroll;
-  background-color: gray;
+  border: dotted;
 }
 .foro .comentario {
   display: block;
@@ -202,7 +199,7 @@ footer ul a:visited {
   height: 100px;
   padding: 1%;
   overflow-y: scroll;
-  background-color: gray;
+  border: dotted;
 }
 .foro .comentario h2 {
   text-align: center;
@@ -288,4 +285,34 @@ article {
   .amarillo:hover {
     color: orange;
   }
+}
+.arts article {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  border: dotted;
+  border-color: darkgray;
+}
+.arts article .art {
+  height: 200px;
+  padding-inline: 2%;
+}
+.arts article .art h2 {
+  text-align: left;
+}
+.arts article .imgs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.arts article .imgs .autor {
+  display: flex;
+  flex-direction: column;
+}
+.arts article .imgs .autor img {
+  width: 50px;
+}
+.arts article .imgs img {
+  width: 100px;
 }/*# sourceMappingURL=styles.css.map */

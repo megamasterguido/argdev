@@ -1,17 +1,12 @@
 footer{
     grid-area: footer;
     background-color: gray;
+
     ul{
         display: list-item;
         padding-inline: 1%;
         column-count: 2;
         font-size: larger;
-        
-        a{
-            &:visited{
-                color: darksalmon;
-            }
-        }
     }
 }
 
