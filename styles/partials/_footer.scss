@@ -1,6 +1,6 @@
 footer{
     grid-area: footer;
-    background-color: gray;
+    background-color: $colorFonfoBox;
 
     ul{
         display: list-item;
@@ -13,9 +13,7 @@ footer{
 @media screen and (min-width: 992px) {
 
     footer{
-        grid-area: footer;
-        background-color: gray;
-
+        
         ul{
             display: flex;
             flex-direction: row;

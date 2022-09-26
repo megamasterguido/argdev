@@ -3,8 +3,8 @@
         display: flex;
         flex-direction: row;
         overflow: hidden;
-        border: dotted;
-        border-color: darkgray;
+        border: $bordeEstilo;
+        border-color: $bordeColor;
         width: 90vw;
 
         .art{

@@ -1,6 +1,6 @@
 header{
     grid-area: nav;
-    background-color: gray;
+    background-color: $colorFonfoBox;
 }
 
 nav{
@@ -45,7 +45,7 @@ nav{
     }
 
     .dropdown-menu{
-        background-color: gray;
+        background-color: $colorFonfoBox;
         color: black;
     }
 

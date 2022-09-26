@@ -1,8 +1,9 @@
+@import "partials/_vars.scss";
+@import "partials/_general.scss";
 @import "partials/_header.scss";
 @import "partials/_footer.scss";
-@import "partials/pag";
-@import "partials/index";
-@import "partials/foro";
-@import "./partials/general";
-@import "./partials/articulos";
-@import "./partials/acerca";
+@import "partials/_index.scss";
+@import "partials/_pag.scss";
+@import "partials/_articulos.scss";
+@import "partials/_foro.scss";
+@import "partials/_acerca.scss";

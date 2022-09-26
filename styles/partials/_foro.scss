@@ -5,14 +5,14 @@
     "nav"
     "main"
     "footer";
-    border-color: darkgray;
+    border-color: $bordeColor;
 
     article{
         display: flex;
         flex-direction: column;
         margin: 2%;
         padding: 2%;
-        border-bottom: dotted;
+        border-bottom: $bordeEstilo;
 
         div{
             display: flex;
@@ -26,7 +26,6 @@
                 padding: 1%;
                 height: 200px;
                 overflow-y: scroll;
-                border: dotted;
             }
         }
     }
@@ -37,7 +36,7 @@
         height: 100px;
         padding: 1%;
         overflow-y: scroll;
-        border: dotted;
+        border: $bordeEstilo;
     
         h2{
             text-align: center;
@@ -52,8 +51,8 @@
     .autor{
         img{
             width: 60px;
-            border: dotted;
-            border-color: darkgray;
+            border: $bordeEstilo;
+            border-color: $bordeColor;
         }
 
         a{
@@ -65,7 +64,7 @@
         img{
             width: 120px;
             border: dotted;
-            border-color: darkgray;
+            border-color: $bordeColor;
         }
     }
 }
