@@ -5,6 +5,13 @@
     'pag'
     'main'
     'footer';
+
+    main{
+        margin: 2%;
+        article{
+            margin: 2%;
+        }
+    }
     
 }
 
@@ -15,5 +22,13 @@
         'nav nav'
         'main pag'
         'footer footer';
+            
+        main{
+            margin: 1%;
+            
+            article{
+                margin: 1%;
+            }
+        }
     }
 }

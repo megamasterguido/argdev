@@ -1,18 +1,66 @@
+* {
+  font-family: "Noto Sans";
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(30, 30, 30);
+}
+
+a {
+  text-decoration: none;
+  color: yellow;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  text-align: justify;
+}
+main a:visited {
+  color: red;
+}
+
+@media screen and (min-width: 992px) {
+  .linkDeNavegacion {
+    transition: all 1s;
+  }
+  .linkDeNavegacion:hover {
+    scale: 1.1;
+  }
+  .linkDeNavegacion a {
+    color: yellow;
+    transition: all 1s;
+  }
+  .linkDeNavegacion a:hover {
+    color: orange;
+  }
+}
 header {
   grid-area: nav;
   background-color: gray;
+  padding: 2%;
+}
+header a:visited {
+  color: yellow;
 }
 
 nav {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: flex-start;
+  top: 0;
+  left: 0;
 }
-nav img {
-  width: 100px;
+nav .logo {
+  width: 120px;
 }
-nav a img:active {
+nav .logo:active {
   background-color: lightgray;
 }
 
@@ -22,26 +70,39 @@ nav a img:active {
 
 .navMobile {
   display: flex;
+  flex-direction: column;
 }
-.navMobile .dropdown button {
-  background-color: black;
-  height: 100%;
-  width: 120px;
-  height: 60px;
-  font-size: xx-large;
-}
-.navMobile .dropdown button:active {
-  background-color: lightgray;
-}
-.navMobile .dropdown-menu {
-  background-color: gray;
-  color: black;
-}
-.navMobile a {
+.navMobile .navMobile__menu__desplegable {
   display: block;
-  margin: 1%;
-  padding: 1%;
-  font-size: x-large;
+  background-color: gray;
+  top: 100px;
+  left: 0;
+}
+.navMobile .navMobile__menu__desplegable li {
+  margin-top: 5%;
+  transition: all 1s;
+  font-size: 0px;
+}
+.navMobile:hover .navMobile__menu__desplegable li {
+  font-size: 40px;
+}
+.navMobile:hover ~ .busqueda .busqueda__box {
+  width: 50%;
+}
+
+.navMobile__menu__boton {
+  display: block;
+  width: 100px;
+  height: 80px;
+  background-color: gray;
+  font-size: 28px;
+  color: black;
+  font-weight: bolder;
+  border: solid;
+  justify-self: center;
+}
+.navMobile__menu__boton:active {
+  background-color: lightgray;
 }
 
 .busqueda {
@@ -49,13 +110,17 @@ nav a img:active {
   flex-direction: row;
   align-items: center;
 }
-.busqueda .busqueda__icono {
-  width: 30px;
-}
 .busqueda .busqueda__box {
-  height: 40px;
+  height: 50px;
   background-color: none;
+  font-size: 18px;
   color: black;
+}
+.busqueda .busqueda__icono {
+  padding: 5%;
+}
+.busqueda .busqueda__icono img {
+  width: 50px;
 }
 
 @media screen and (min-width: 992px) {
@@ -71,18 +136,8 @@ nav a img:active {
     flex-direction: row;
   }
   .navPC ul li {
-    display: flex;
-    transition: all 1s;
-    padding: 2%;
-  }
-  .navPC ul li:hover {
-    transform: scale(1.1, 1.1);
-  }
-  .navPC ul li .amarillo {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    font-size: x-large;
+    font-size: 28px;
+    padding: 15px;
   }
 }
 footer {
@@ -96,26 +151,41 @@ footer ul {
        column-count: 2;
   font-size: larger;
 }
+footer a:visited {
+  color: red;
+}
 
 @media screen and (min-width: 992px) {
-  footer {
-    grid-area: footer;
-    background-color: gray;
-  }
   footer ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding-inline: 1%;
     align-items: center;
-    height: 75px;
+    height: 40px;
+    font-size: 20px;
   }
-  footer ul li {
-    transition: all 1s;
-    font-size: x-large;
+}
+.index {
+  display: grid;
+  grid-template-areas: "nav" "pag" "main" "footer";
+}
+.index main {
+  margin: 2%;
+}
+.index main article {
+  margin: 2%;
+}
+
+@media screen and (min-width: 992px) {
+  .index {
+    grid-template-areas: "nav nav" "main pag" "footer footer";
   }
-  footer ul li:hover {
-    transform: scale(1.5, 1.5);
+  .index main {
+    margin: 1%;
+  }
+  .index main article {
+    margin: 1%;
   }
 }
 .pag {
@@ -124,8 +194,7 @@ footer ul {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 1%;
-  margin: 1%;
+  padding: 5%;
   background-color: gray;
 }
 .pag h1 {
@@ -147,143 +216,15 @@ footer ul {
 
 @media screen and (min-width: 992px) {
   .pag {
-    margin-top: 15%;
+    margin: 1%;
+    padding: 15%;
   }
   .pag li {
     transition: transform 0.5s;
+    padding: 5%;
   }
   .pag li:hover {
     transform: scale(1.1, 1.1);
-  }
-}
-.index {
-  display: grid;
-  grid-template-areas: "nav" "pag" "main" "footer";
-}
-
-@media screen and (min-width: 992px) {
-  .index {
-    grid-template-areas: "nav nav" "main pag" "footer footer";
-  }
-}
-.foro {
-  background-color: rgb(30, 30, 30);
-  display: grid;
-  grid-template-areas: "nav" "main" "footer";
-  border-color: darkgray;
-}
-.foro article {
-  display: flex;
-  flex-direction: column;
-  margin: 2%;
-  padding: 2%;
-  border-bottom: dotted;
-}
-.foro article div {
-  display: flex;
-  align-items: center;
-  margin: 1%;
-}
-.foro article div .artForo {
-  display: flex;
-  flex-direction: column;
-  margin: 1%;
-  padding: 1%;
-  height: 200px;
-  overflow-y: scroll;
-  border: dotted;
-}
-.foro .comentario {
-  display: block;
-  text-justify: distribute;
-  height: 100px;
-  padding: 1%;
-  overflow-y: scroll;
-  border: dotted;
-}
-.foro .comentario h2 {
-  text-align: center;
-}
-.foro .artImgs {
-  display: flex;
-  flex-direction: column;
-}
-.foro .autor img {
-  width: 60px;
-  border: dotted;
-  border-color: darkgray;
-}
-.foro .autor a {
-  text-align: center;
-}
-.foro .artPrev img {
-  width: 120px;
-  border: dotted;
-  border-color: darkgray;
-}
-
-@media screen and (min-width: 992px) {
-  .foro {
-    grid-template-areas: "nav" "main" "footer";
-  }
-  .foro .artImgs {
-    flex-direction: row;
-  }
-  .foro .autor img {
-    width: 100px;
-  }
-  .foro .artPrev img {
-    width: 250px;
-  }
-}
-* {
-  font-family: "Noto Sans";
-  color: whitesmoke;
-}
-
-body {
-  background-color: rgb(30, 30, 30);
-}
-
-a {
-  text-decoration: none;
-  color: yellow;
-}
-
-li {
-  list-style: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-main {
-  grid-area: main;
-  margin: 2%;
-}
-
-main article {
-  text-align: justify;
-}
-
-main section h2 {
-  display: inline-block;
-  font-size: xx-large;
-}
-
-article {
-  padding: 1%;
-  margin: 2%;
-}
-
-@media screen and (min-width: 992px) {
-  .amarillo {
-    color: yellow;
-    transition: all 1s;
-    text-align: center;
-  }
-  .amarillo:hover {
-    color: orange;
   }
 }
 .arts article {
@@ -292,7 +233,7 @@ article {
   overflow: hidden;
   border: dotted;
   border-color: darkgray;
-  width: 90vw;
+  width: 95vw;
 }
 .arts article .art {
   height: 200px;
@@ -318,6 +259,79 @@ article {
   width: 100px;
 }
 
+.foro {
+  background-color: rgb(30, 30, 30);
+  display: grid;
+  grid-template-areas: "nav" "main" "footer";
+  border-color: darkgray;
+}
+.foro article {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  padding: 2%;
+  border-bottom: dotted;
+}
+.foro article .superior {
+  display: flex;
+  margin: 1%;
+}
+.foro article .superior .artForo {
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  padding: 1%;
+  height: 200px;
+  overflow-y: scroll;
+}
+.foro .comentarios {
+  display: block;
+  text-justify: distribute;
+  height: 100px;
+  padding: 1%;
+  overflow-y: scroll;
+  border: dotted;
+}
+.foro .comentarios .comentario {
+  padding: 1%;
+  border-bottom: dotted;
+}
+.foro .artImgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.foro .autor {
+  text-align: center;
+}
+.foro .autor img {
+  width: 60px;
+  border: dotted;
+  border-color: darkgray;
+}
+.foro .artPrev img {
+  width: 120px;
+  border: dotted;
+  border-color: darkgray;
+}
+
+@media screen and (min-width: 992px) {
+  .foro {
+    grid-template-areas: "nav" "main" "footer";
+  }
+  .foro .artImgs {
+    flex-direction: row;
+  }
+  .foro .autor {
+    margin: 2%;
+  }
+  .foro .autor img {
+    width: 100px;
+  }
+  .foro .artPrev img {
+    width: 250px;
+  }
+}
 .acerca {
   display: grid;
   grid-template-areas: "nav" "main" "footer";

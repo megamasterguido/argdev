@@ -17,61 +17,83 @@
         <header>
             <nav>
                 <a href="index.html">
-                    <img src="assets/img/logo_argdev.png" alt="Logo de Argdev"/>
+                    <img class="logo" src="assets/img/logo_argdev.png" alt="Logo de Argdev"/>
                 </a>
                 <div class="navMobile">
-                    <div class="dropdown">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
-                            MENU
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="articulos.html">
+                    <button class="navMobile__menu__boton">
+                        MENU
+                    </button>
+                    <ul class="navMobile__menu__desplegable">
+                        <li>
+                            <a href="articulos.html">
                                 ARTÍCULOS
                             </a>
-                            <a class="dropdown-item" href="foro.html">
+                        </li>
+                        <li>
+                            <a href="foro.html">
                                 FORO
                             </a>
-                            <a class="dropdown-item" href="contacto.html">
+                        </li>
+                        <li>
+                            <a href="contacto.html">
                                 CONTACTO
                             </a>
-                            <a class="dropdown-item" href="acerca_de_nosotros.html">
+                        </li>
+                        <li>
+                            <a href="acerca_de_nosotros.html">
                                 ACERCA DE NOSOTROS
                             </a>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="navPC">
                     <ul>
-                        <li><a class="amarillo" href="articulos.html">ARTÍCULOS</a></li>
-                        <li><a class="amarillo" href="foro.html">FORO</a></li>
-                        <li><a class="amarillo" href="contacto.html">CONTACTO</a></li>
-                        <li><a class="amarillo" href="acerca_de_nosotros.html">ACERCA DE NOSOTROS</a></li>
+                        <li class="linkDeNavegacion">
+                            <a href="articulos.html">
+                                ARTÍCULOS
+                            </a>
+                        </li>
+                        <li class="linkDeNavegacion">
+                            <a href="foro.html">
+                                FORO
+                            </a>
+                        </li>
+                        <li class="linkDeNavegacion">
+                            <a href="contacto.html">
+                                CONTACTO
+                            </a>
+                        </li>
+                        <li class="linkDeNavegacion">
+                            <a href="acerca_de_nosotros.html">
+                                ACERCA DE NOSOTROS
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="busqueda">
                     <input class="busqueda__box" type="search" placeholder="Buscar">
-                    <img class="busqueda__icono" src="https://pic.onlinewebfonts.com/svg/img_160043.png" alt="ícono de lupa">
+                    <a class="busqueda__icono" href="#">
+                        <img src="https://pic.onlinewebfonts.com/svg/img_160043.png" alt="ícono de lupa">
+                    </a>
                 </div>
             </nav>
         </header>
         <main>
             <article>
-                <div class="col-sm-12 col-md-10">
-                    <div class="col-sm-8 col-md-10">
-                        <div class="artForo">
-                            <h2>
-                                Asunto
-                            </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non eros sed odio commodo aliquet et vitae mauris. Donec malesuada interdum lorem, a semper mauris efficitur a. Fusce ac arcu consequat, finibus massa vel, posuere odio. Phasellus at mi magna. Vestibulum commodo leo non nulla tincidunt pulvinar. Pellentesque dapibus egestas lacinia. Nunc hendrerit turpis sit amet odio mollis luctus. Vestibulum pharetra neque nunc, non pharetra risus ornare at. Curabitur id iaculis purus. Vivamus dapibus lorem non tortor luctus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum magna dolor, porttitor a laoreet eget, aliquam ut ipsum. Aliquam erat volutpat.
-                            </p>
-                        </div>
-                    </div> 
+                <div class="superior">
+                    <div class="artForo">
+                        <h2>
+                            Asunto
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non eros sed odio commodo aliquet et vitae mauris. Donec malesuada interdum lorem, a semper mauris efficitur a. Fusce ac arcu consequat, finibus massa vel, posuere odio. Phasellus at mi magna. Vestibulum commodo leo non nulla tincidunt pulvinar. Pellentesque dapibus egestas lacinia. Nunc hendrerit turpis sit amet odio mollis luctus. Vestibulum pharetra neque nunc, non pharetra risus ornare at. Curabitur id iaculis purus. Vivamus dapibus lorem non tortor luctus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum magna dolor, porttitor a laoreet eget, aliquam ut ipsum. Aliquam erat volutpat.
+                        </p>
+                    </div>
                     <div class="artImgs">
                         <div class="autor">
                             <a href="#" class="amarillo">
                                 <img src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" class="rounded-circle" alt="Icono de usuario del autor del articulo">
-                                <br>Nombre de Usuario
+                                <br>Autor
                             </a>
                         </div>
                         <div class="artPrev">
@@ -79,32 +101,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sd-10 col-md-12">
+                <div class="comentarios">
                     <div class="comentario">
-                        <h2>
-                            Comentarios
-                        </h2>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non eros sed odio commodo aliquet et vitae mauris. Donec malesuada interdum lorem, a semper mauris efficitur a. Fusce ac arcu consequat, finibus massa vel, posuere odio. Phasellus at mi magna. Vestibulum commodo leo non nulla tincidunt pulvinar. Pellentesque dapibus egestas lacinia. Nunc hendrerit turpis sit amet odio mollis luctus. Vestibulum pharetra neque nunc, non pharetra risus ornare at. Curabitur id iaculis purus. Vivamus dapibus lorem non tortor luctus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum magna dolor, porttitor a laoreet eget, aliquam ut ipsum. Aliquam erat volutpat.
+                        Comentario 1 <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
+                    </div>
+                    <div class="comentario">
+                        Comentario 2 <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
+                    </div>
+                    <div class="comentario">
+                        Comentario 3 <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
                     </div>
                 </div>
             </article>
             <article>
-                <div class="col-sm-12 col-md-10">
-                    <div class="col-sm-8 col-md-10">
-                        <div class="artForo">
-                            <h2>
-                                Asunto
-                            </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non eros sed odio commodo aliquet et vitae mauris. Donec malesuada interdum lorem, a semper mauris efficitur a. Fusce ac arcu consequat, finibus massa vel, posuere odio. Phasellus at mi magna. Vestibulum commodo leo non nulla tincidunt pulvinar. Pellentesque dapibus egestas lacinia. Nunc hendrerit turpis sit amet odio mollis luctus. Vestibulum pharetra neque nunc, non pharetra risus ornare at. Curabitur id iaculis purus. Vivamus dapibus lorem non tortor luctus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum magna dolor, porttitor a laoreet eget, aliquam ut ipsum. Aliquam erat volutpat.
-                            </p>
-                        </div>
-                    </div> 
+                <div class="superior">
+                    <div class="artForo">
+                        <h2>
+                            Asunto
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non eros sed odio commodo aliquet et vitae mauris. Donec malesuada interdum lorem, a semper mauris efficitur a. Fusce ac arcu consequat, finibus massa vel, posuere odio. Phasellus at mi magna. Vestibulum commodo leo non nulla tincidunt pulvinar. Pellentesque dapibus egestas lacinia. Nunc hendrerit turpis sit amet odio mollis luctus. Vestibulum pharetra neque nunc, non pharetra risus ornare at. Curabitur id iaculis purus. Vivamus dapibus lorem non tortor luctus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum magna dolor, porttitor a laoreet eget, aliquam ut ipsum. Aliquam erat volutpat.
+                        </p>
+                    </div>
                     <div class="artImgs">
                         <div class="autor">
                             <a href="#" class="amarillo">
                                 <img src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" class="rounded-circle" alt="Icono de usuario del autor del articulo">
-                                <br>Nombre de Usuario
+                                <br>Autor
                             </a>
                         </div>
                         <div class="artPrev">
@@ -112,32 +138,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sd-10 col-md-12">
+                <div class="comentarios">
                     <div class="comentario">
-                        <h2>
-                            Comentarios
-                        </h2>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non eros sed odio commodo aliquet et vitae mauris. Donec malesuada interdum lorem, a semper mauris efficitur a. Fusce ac arcu consequat, finibus massa vel, posuere odio. Phasellus at mi magna. Vestibulum commodo leo non nulla tincidunt pulvinar. Pellentesque dapibus egestas lacinia. Nunc hendrerit turpis sit amet odio mollis luctus. Vestibulum pharetra neque nunc, non pharetra risus ornare at. Curabitur id iaculis purus. Vivamus dapibus lorem non tortor luctus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum magna dolor, porttitor a laoreet eget, aliquam ut ipsum. Aliquam erat volutpat.
+                        Comentario 1 <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
+                    </div>
+                    <div class="comentario">
+                        Comentario 2 <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
+                    </div>
+                    <div class="comentario">
+                        Comentario 3 <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
                     </div>
                 </div>
             </article>
             <article>
-                <div class="col-sm-12 col-md-10">
-                    <div class="col-sm-8 col-md-10">
-                        <div class="artForo">
-                            <h2>
-                                Asunto
-                            </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non eros sed odio commodo aliquet et vitae mauris. Donec malesuada interdum lorem, a semper mauris efficitur a. Fusce ac arcu consequat, finibus massa vel, posuere odio. Phasellus at mi magna. Vestibulum commodo leo non nulla tincidunt pulvinar. Pellentesque dapibus egestas lacinia. Nunc hendrerit turpis sit amet odio mollis luctus. Vestibulum pharetra neque nunc, non pharetra risus ornare at. Curabitur id iaculis purus. Vivamus dapibus lorem non tortor luctus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum magna dolor, porttitor a laoreet eget, aliquam ut ipsum. Aliquam erat volutpat.
-                            </p>
-                        </div>
-                    </div> 
+                <div class="superior">
+                    <div class="artForo">
+                        <h2>
+                            Asunto
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non eros sed odio commodo aliquet et vitae mauris. Donec malesuada interdum lorem, a semper mauris efficitur a. Fusce ac arcu consequat, finibus massa vel, posuere odio. Phasellus at mi magna. Vestibulum commodo leo non nulla tincidunt pulvinar. Pellentesque dapibus egestas lacinia. Nunc hendrerit turpis sit amet odio mollis luctus. Vestibulum pharetra neque nunc, non pharetra risus ornare at. Curabitur id iaculis purus. Vivamus dapibus lorem non tortor luctus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum magna dolor, porttitor a laoreet eget, aliquam ut ipsum. Aliquam erat volutpat.
+                        </p>
+                    </div>
                     <div class="artImgs">
                         <div class="autor">
                             <a href="#" class="amarillo">
                                 <img src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" class="rounded-circle" alt="Icono de usuario del autor del articulo">
-                                <br>Nombre de Usuario
+                                <br>Autor
                             </a>
                         </div>
                         <div class="artPrev">
@@ -145,39 +175,45 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sd-10 col-md-12">
+                <div class="comentarios">
                     <div class="comentario">
-                        <h2>
-                            Comentarios
-                        </h2>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non eros sed odio commodo aliquet et vitae mauris. Donec malesuada interdum lorem, a semper mauris efficitur a. Fusce ac arcu consequat, finibus massa vel, posuere odio. Phasellus at mi magna. Vestibulum commodo leo non nulla tincidunt pulvinar. Pellentesque dapibus egestas lacinia. Nunc hendrerit turpis sit amet odio mollis luctus. Vestibulum pharetra neque nunc, non pharetra risus ornare at. Curabitur id iaculis purus. Vivamus dapibus lorem non tortor luctus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum magna dolor, porttitor a laoreet eget, aliquam ut ipsum. Aliquam erat volutpat.
+                        Comentario 1 <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
+                    </div>
+                    <div class="comentario">
+                        Comentario 2 <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
+                    </div>
+                    <div class="comentario">
+                        Comentario 3 <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
                     </div>
                 </div>
             </article>
         </main>
         <footer>
             <ul>
-                <li>
-                    <a class="amarillo"  href="contacto.html">
+                <li class="linkDeNavegacion">
+                    <a href="contacto.html">
                         Contacto
                     </a>
                 </li>
-                <li>
-                    <a class="amarillo"  href="#"> 
+                <li class="linkDeNavegacion">
+                    <a href="#"> 
                          FAQ
                      </a>
                 </li>
-                <li>
-                    <a class="amarillo"  href="acerca_de_nosotros.html">
+                <li class="linkDeNavegacion">
+                    <a href="acerca_de_nosotros.html">
                         Acerca de nosotros
                     </a>
                 </li>
-                <li>
-                   <a class="amarillo"  href="#"> 
+                <li class="linkDeNavegacion">
+                   <a href="#"> 
                         Información legal
                     </a>
                 </li>
             </ul>
-        </footer>        
+        </footer>       
     </body>
 </html>

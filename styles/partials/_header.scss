@@ -1,26 +1,28 @@
 header{
     grid-area: nav;
-    background-color: $colorFonfoBox;
+    background-color: $colorFondoBox;
+    padding: 2%;
+    a{
+        &:visited{
+            color: yellow;
+        }
+    }
 }
 
 nav{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    
-    img{
-        width: 100px;
-    }
+    justify-content: space-around;
+    align-items: flex-start;
+    top: 0;
+    left: 0;
 
-    a{
-        img{
-            &:active{
-                background-color: lightgray;
-            }
+    .logo{
+        width: 120px;
+        &:active{
+            background-color: lightgray;
         }
-    }    
-
+    }
 }
 
 .navPC{
@@ -29,31 +31,47 @@ nav{
 
 .navMobile{
     display: flex;
+    flex-direction: column;
+    .navMobile__menu__desplegable{
+        display: block;
+        background-color: $colorFondoBox;
+        top: 100px;
+        left: 0;
+        li{
+            margin-top: 5%;
+            transition: all 1s;
+            font-size: 0px;
+        }
+    }
 
-    .dropdown{
-        button{
-            background-color: black;
-            height: 100%;
-            width: 120px;
-            height: 60px;
-            font-size: xx-large;
-
-            &:active{
-                background-color: lightgray;
+    &:hover{
+        .navMobile__menu__desplegable{
+            li{
+                font-size: 40px;
             }
         }
     }
 
-    .dropdown-menu{
-        background-color: $colorFonfoBox;
-        color: black;
+    &:hover ~.busqueda{
+        .busqueda__box{
+            width: 50%;
+        }
     }
 
-    a{
-        display: block;
-        margin: 1%;
-        padding: 1%;
-        font-size: x-large;
+}
+
+.navMobile__menu__boton{
+    display: block;
+    width: 100px;
+    height: 80px;
+    background-color: $colorFondoBox;
+    font-size: 28px;
+    color: black;
+    font-weight: bolder;
+    border: solid;
+    justify-self: center;
+    &:active{
+        background-color: lightgray;
     }
 }
 
@@ -62,14 +80,18 @@ nav{
     flex-direction: row;
     align-items: center;
     
-    .busqueda__icono{
-        width: 30px;
+    .busqueda__box{
+        height: 50px;
+        background-color: none;
+        font-size: 18px;
+        color: black;
     }
     
-    .busqueda__box{
-        height: 40px;
-        background-color: none;
-        color: black;
+    .busqueda__icono{
+        padding: 5%;
+        img{
+            width: 50px;
+        }
     }
 }
 
@@ -86,23 +108,10 @@ nav{
         ul{
             display: flex;
             flex-direction: row;
-
             li{
-                display: flex;
-                transition: all 1s;
-                padding: 2%;
-
-                &:hover{
-                    transform: scale(1.1, 1.1);
-                }
-
-                .amarillo{
-                    width: max-content;
-                    font-size: x-large;
-                }
+                font-size: 28px;
+                padding: 15px;
             }
         }
     }
-
 }
-

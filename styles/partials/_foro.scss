@@ -14,9 +14,8 @@
         padding: 2%;
         border-bottom: $bordeEstilo;
 
-        div{
+        .superior{
             display: flex;
-            align-items: center;
             margin: 1%;
 
             .artForo{
@@ -30,33 +29,32 @@
         }
     }
 
-    .comentario{
+    .comentarios{
         display: block;
         text-justify: distribute;
         height: 100px;
         padding: 1%;
         overflow-y: scroll;
         border: $bordeEstilo;
-    
-        h2{
-            text-align: center;
+
+        .comentario{
+            padding: 1%;
+            border-bottom: $bordeEstilo;
         }
     }
 
     .artImgs{
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
     }
 
     .autor{
+        text-align: center;
         img{
             width: 60px;
             border: $bordeEstilo;
             border-color: $bordeColor;
-        }
-
-        a{
-            text-align: center;
         }
     }
 
@@ -81,6 +79,7 @@
         }
         
         .autor{
+            margin: 2%;
             img{
                 width: 100px;
             }

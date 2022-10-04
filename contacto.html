@@ -17,40 +17,64 @@
         <header>
             <nav>
                 <a href="index.html">
-                    <img src="assets/img/logo_argdev.png" alt="Logo de Argdev"/>
+                    <img class="logo" src="assets/img/logo_argdev.png" alt="Logo de Argdev"/>
                 </a>
                 <div class="navMobile">
-                    <div class="dropdown">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
-                            MENU
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="articulos.html">
+                    <button class="navMobile__menu__boton">
+                        MENU
+                    </button>
+                    <ul class="navMobile__menu__desplegable">
+                        <li>
+                            <a href="articulos.html">
                                 ARTÍCULOS
                             </a>
-                            <a class="dropdown-item" href="foro.html">
+                        </li>
+                        <li>
+                            <a href="foro.html">
                                 FORO
                             </a>
-                            <a class="dropdown-item" href="contacto.html">
+                        </li>
+                        <li>
+                            <a href="contacto.html">
                                 CONTACTO
                             </a>
-                            <a class="dropdown-item" href="acerca_de_nosotros.html">
+                        </li>
+                        <li>
+                            <a href="acerca_de_nosotros.html">
                                 ACERCA DE NOSOTROS
                             </a>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="navPC">
                     <ul>
-                        <li><a class="amarillo" href="articulos.html">ARTÍCULOS</a></li>
-                        <li><a class="amarillo" href="foro.html">FORO</a></li>
-                        <li><a class="amarillo" href="contacto.html">CONTACTO</a></li>
-                        <li><a class="amarillo" href="acerca_de_nosotros.html">ACERCA DE NOSOTROS</a></li>
+                        <li class="linkDeNavegacion">
+                            <a href="articulos.html">
+                                ARTÍCULOS
+                            </a>
+                        </li>
+                        <li class="linkDeNavegacion">
+                            <a href="foro.html">
+                                FORO
+                            </a>
+                        </li>
+                        <li class="linkDeNavegacion">
+                            <a href="contacto.html">
+                                CONTACTO
+                            </a>
+                        </li>
+                        <li class="linkDeNavegacion">
+                            <a href="acerca_de_nosotros.html">
+                                ACERCA DE NOSOTROS
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="busqueda">
                     <input class="busqueda__box" type="search" placeholder="Buscar">
-                    <img class="busqueda__icono" src="https://pic.onlinewebfonts.com/svg/img_160043.png" alt="ícono de lupa">
+                    <a class="busqueda__icono" href="#">
+                        <img src="https://pic.onlinewebfonts.com/svg/img_160043.png" alt="ícono de lupa">
+                    </a>
                 </div>
             </nav>
         </header>
@@ -70,23 +94,23 @@
         </main>
         <footer>
             <ul>
-                <li>
-                    <a class="amarillo"  href="contacto.html">
+                <li class="linkDeNavegacion">
+                    <a href="contacto.html">
                         Contacto
                     </a>
                 </li>
-                <li>
-                    <a class="amarillo"  href="#"> 
+                <li class="linkDeNavegacion">
+                    <a href="#"> 
                          FAQ
                      </a>
                 </li>
-                <li>
-                    <a class="amarillo"  href="acerca_de_nosotros.html">
+                <li class="linkDeNavegacion">
+                    <a href="acerca_de_nosotros.html">
                         Acerca de nosotros
                     </a>
                 </li>
-                <li>
-                   <a class="amarillo"  href="#"> 
+                <li class="linkDeNavegacion">
+                   <a href="#"> 
                         Información legal
                     </a>
                 </li>

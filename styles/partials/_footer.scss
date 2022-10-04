@@ -1,6 +1,6 @@
 footer{
     grid-area: footer;
-    background-color: $colorFonfoBox;
+    background-color: $colorFondoBox;
 
     ul{
         display: list-item;
@@ -8,29 +8,25 @@ footer{
         column-count: 2;
         font-size: larger;
     }
+
+    a{
+        &:visited{
+            color: $visitedLinks;
+        }
+    }
 }
 
 @media screen and (min-width: 992px) {
 
     footer{
-        
         ul{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             padding-inline: 1%;
             align-items: center;
-            height: 75px;
-
-            li{
-                transition: all 1s;
-
-                font-size: x-large;
-
-                &:hover{
-                    transform: scale(1.5, 1.5);
-                }
-            }
+            height: 40px;
+            font-size: 20px;
         }
     }
 }

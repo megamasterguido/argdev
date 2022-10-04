@@ -2,9 +2,8 @@
     display: block;
     grid-area: pag;
     height: fit-content;
-    padding: 1%;
-    margin: 1%;
-    background-color: $colorFonfoBox;
+    padding: 5%;
+    background-color: $colorFondoBox;
     
     h1{
         text-align: center;
@@ -31,10 +30,12 @@
 
 @media screen and (min-width: 992px) {
     .pag{
-        margin-top: 15%;
+        margin: 1%;
+        padding: 15%;
         
         li{
             transition: transform 0.5s;
+            padding: 5%;
 
             &:hover{
                 transform: scale(1.1, 1.1);
