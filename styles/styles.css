@@ -1,3 +1,15 @@
+.comentario10 {
+  font-size: 10;
+}
+
+.comentario20 {
+  font-size: 20;
+}
+
+.comentario30 {
+  font-size: 30;
+}
+
 * {
   font-family: "Noto Sans";
   color: whitesmoke;
@@ -292,7 +304,7 @@ footer a:visited {
   overflow-y: scroll;
   border: dotted;
 }
-.foro .comentarios .comentario {
+.foro .comentarios div {
   padding: 1%;
   border-bottom: dotted;
 }

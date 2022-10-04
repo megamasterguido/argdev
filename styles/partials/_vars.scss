@@ -2,3 +2,9 @@ $colorFondoBox: gray;
 $visitedLinks: red;
 $bordeColor: darkgray;
 $bordeEstilo: dotted;
+
+@for $fuente from 1 through 3 {
+    .comentario#{$fuente*10}{
+        font-size: $fuente*10;
+    }
+}
