@@ -5,7 +5,6 @@
     "nav"
     "main"
     "footer";
-    border-color: $bordeColor;
 
     article{
         display: flex;
@@ -13,6 +12,7 @@
         margin: 2%;
         padding: 2%;
         border-bottom: $bordeEstilo;
+        border-color: $bordeColor;
 
         .superior{
             display: flex;
@@ -25,6 +25,10 @@
                 padding: 1%;
                 height: 200px;
                 overflow-y: scroll;
+
+                img{
+                    max-width: 300px;
+                }
             }
         }
     }
@@ -33,13 +37,26 @@
         display: block;
         text-justify: distribute;
         height: 100px;
-        padding: 1%;
         overflow-y: scroll;
         border: $bordeEstilo;
+        border-color: $bordeColor;
 
-        div{
+        .comentario__box{
             padding: 1%;
             border-bottom: $bordeEstilo;
+            border-color: $bordeColor;
+            .comentario__box__pie{
+                display: flex;
+                justify-content: end;
+                border-right: $bordeEstilo;
+                border-color: $bordeColor;
+
+                li{
+                    padding-inline: 1%;
+                    border-left: $bordeEstilo;
+                    border-color: $bordeColor;
+                }
+            }
         }
     }
 
@@ -47,22 +64,22 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-    }
 
-    .autor{
-        text-align: center;
-        img{
-            width: 60px;
+        .autor{
+            text-align: center;
+            a{
+                img{
+                    width: 60px;
+                    border: $bordeEstilo;
+                    border-color: $bordeColor;
+                }}
+        }
+    
+        .artPrev{
             border: $bordeEstilo;
             border-color: $bordeColor;
-        }
-    }
-
-    .artPrev{
-        img{
-            width: 120px;
-            border: dotted;
-            border-color: $bordeColor;
+            height: 100px;
+            width: 150px;
         }
     }
 }
@@ -74,21 +91,31 @@
         "main"
         "footer";
 
-        .artImgs{
-            flex-direction: row;
-        }
-        
-        .autor{
-            margin: 2%;
-            img{
-                width: 100px;
+        article{
+            .superior{
+                .artForo{
+                    img{
+                        max-width: 700px;
+                    }
+                }
             }
         }
 
-        .artPrev{
-            img{
-                width: 250px;
-            }  
+        .artImgs{
+            flex-direction: row;
+            
+        
+            .autor{
+                margin: 2%;
+                img{
+                    width: 100px;
+                }
+            }
+
+            .artPrev{
+                height: 200px;
+                width: 300px;
+            }
         }
     }
 }

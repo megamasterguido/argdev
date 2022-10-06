@@ -1,15 +1,3 @@
-.comentario10 {
-  font-size: 10;
-}
-
-.comentario20 {
-  font-size: 20;
-}
-
-.comentario30 {
-  font-size: 30;
-}
-
 * {
   font-family: "Noto Sans";
   color: whitesmoke;
@@ -187,6 +175,8 @@ footer a:visited {
 }
 .index main article {
   margin: 2%;
+  height: 100px;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 992px) {
@@ -263,6 +253,7 @@ footer a:visited {
 .arts article .imgs .autor {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .arts article .imgs .autor img {
   width: 50px;
@@ -275,7 +266,6 @@ footer a:visited {
   background-color: rgb(30, 30, 30);
   display: grid;
   grid-template-areas: "nav" "main" "footer";
-  border-color: darkgray;
 }
 .foro article {
   display: flex;
@@ -283,6 +273,7 @@ footer a:visited {
   margin: 2%;
   padding: 2%;
   border-bottom: dotted;
+  border-color: darkgray;
 }
 .foro article .superior {
   display: flex;
@@ -296,52 +287,72 @@ footer a:visited {
   height: 200px;
   overflow-y: scroll;
 }
+.foro article .superior .artForo img {
+  max-width: 300px;
+}
 .foro .comentarios {
   display: block;
   text-justify: distribute;
   height: 100px;
-  padding: 1%;
   overflow-y: scroll;
   border: dotted;
+  border-color: darkgray;
 }
-.foro .comentarios div {
+.foro .comentarios .comentario__box {
   padding: 1%;
   border-bottom: dotted;
+  border-color: darkgray;
+}
+.foro .comentarios .comentario__box .comentario__box__pie {
+  display: flex;
+  justify-content: end;
+  border-right: dotted;
+  border-color: darkgray;
+}
+.foro .comentarios .comentario__box .comentario__box__pie li {
+  padding-inline: 1%;
+  border-left: dotted;
+  border-color: darkgray;
 }
 .foro .artImgs {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.foro .autor {
+.foro .artImgs .autor {
   text-align: center;
 }
-.foro .autor img {
+.foro .artImgs .autor a img {
   width: 60px;
   border: dotted;
   border-color: darkgray;
 }
-.foro .artPrev img {
-  width: 120px;
+.foro .artImgs .artPrev {
   border: dotted;
   border-color: darkgray;
+  height: 100px;
+  width: 150px;
 }
 
 @media screen and (min-width: 992px) {
   .foro {
     grid-template-areas: "nav" "main" "footer";
   }
+  .foro article .superior .artForo img {
+    max-width: 700px;
+  }
   .foro .artImgs {
     flex-direction: row;
   }
-  .foro .autor {
+  .foro .artImgs .autor {
     margin: 2%;
   }
-  .foro .autor img {
+  .foro .artImgs .autor img {
     width: 100px;
   }
-  .foro .artPrev img {
-    width: 250px;
+  .foro .artImgs .artPrev {
+    height: 200px;
+    width: 300px;
   }
 }
 .acerca {
@@ -366,4 +377,37 @@ footer a:visited {
 }
 .acerca main .fila2 img {
   width: 200px;
+}
+
+.pagContacto {
+  display: grid;
+  grid-template-areas: "nav" "main" "footer";
+}
+.pagContacto main {
+  grid-area: "main";
+  padding: 2%;
+}
+.pagContacto main form {
+  display: flex;
+  flex-direction: column;
+}
+.pagContacto main form .izq {
+  display: flex;
+  margin: 2%;
+}
+.pagContacto main form .izq div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 2%;
+}
+.pagContacto main form .der textarea {
+  padding: 2%;
+  color: black;
+  width: 100%;
+  height: 500px;
+  overflow-y: scroll;
+}
+.pagContacto main form .der input {
+  color: black;
 }/*# sourceMappingURL=styles.css.map */

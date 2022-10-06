@@ -83,36 +83,81 @@
                 <div class="superior">
                     <div class="artForo">
                         <h2>
-                            Asunto
+                            Uso de "->" y "::" en PHP
                         </h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non eros sed odio commodo aliquet et vitae mauris. Donec malesuada interdum lorem, a semper mauris efficitur a. Fusce ac arcu consequat, finibus massa vel, posuere odio. Phasellus at mi magna. Vestibulum commodo leo non nulla tincidunt pulvinar. Pellentesque dapibus egestas lacinia. Nunc hendrerit turpis sit amet odio mollis luctus. Vestibulum pharetra neque nunc, non pharetra risus ornare at. Curabitur id iaculis purus. Vivamus dapibus lorem non tortor luctus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum magna dolor, porttitor a laoreet eget, aliquam ut ipsum. Aliquam erat volutpat.
+                            Estoy aprendiendo PHP y en una de las actividades requiero leer el codigo de alguien mas. Y hay lineas con esto:
+                            <br>
+                            ->where()
+                            <br>
+                            ->first()
+                            <br>
+                            Calculation::where('id', ">=", 1)->update
+                            <br>
+                            No se a que se refieren las flechas -> y los dos dobles puntos ::
+                            <br>
+                            Tengo entendido que se suelen usar las flechas en "this" para hacer referencia al contexto actual del objeto, pero aun no entiendo con where y first, o sea, individualmente que es "->"? o siempre se acompaña de where? y a que hace referencia con first? Porque tengo entendido que "Where", no es lo mismo que ->Where, o si? Segun vi que "::" se usa para la herencia. A lo mejor es algo muy facil pero prefiero preguntar porque no sale en la documentacion de PHP o quiza no se buscar
                         </p>
                     </div>
                     <div class="artImgs">
                         <div class="autor">
-                            <a href="#" class="amarillo">
-                                <img src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" class="rounded-circle" alt="Icono de usuario del autor del articulo">
-                                <br>Autor
+                            <a href="https://es.stackoverflow.com/users/304128/adonay">
+                                <img src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" class="rounded-circle" alt="El autor del articulo no tiene imagen de perfil">
+                                <br>Adonay
                             </a>
                         </div>
-                        <div class="artPrev">
-                            <img src="https://1000marcas.net/wp-content/uploads/2021/06/GNU-Logo.jpg" alt="Previsualización del articulo">
-                        </div>
+                        <img class="artPrev" src="https://cdn3.iconfinder.com/data/icons/basic-ui-elements-2-3-line/512/Basic_UI_Elements_-_2.3_-_Line_Cut_copy-02-256.png" alt="El artículo no posee previsualización">
                     </div>
                 </div>
                 <div class="comentarios">
-                    <div class="comentario10">
-                        Comentario 1 <br>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
-                    </div>
-                    <div class="comentario20">
-                        Comentario 2 <br>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
-                    </div>
-                    <div class="comentario30">
-                        Comentario 3 <br>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
+                    <div class="comentario__box">
+                        <p class="comentario">
+                            Si estás aprendiendo PHP, ve paso a paso. <br>
+                            <br>
+                            Lo digo porque te voy a decir la diferencia entre -> y ::, y posiblemente te quedes igual (o casi). <br>
+                            <br>
+                            Ambos se usan para acceder a propiedades y métodos de una clase. La diferencia es que -> se usa para acceder a propiedades y métodos no estáticos, mientras que :: se usa para acceder a propiedades y métodos estáticos. <br>
+                            <br>
+                            Te voy a poner un ejemplo: <br>
+
+                            <?php <br>
+
+                            class MyClass <br>
+                            { <br>
+                            &emsp;static public $propiedadEstatica = 'Propiedad estática'; <br>
+                            &emsp;public $propiedadNoEstatica = 'Propiedad no estática'; <br>
+                                <br>
+                            &emsp;static public function metodoEstatico() <br>
+                            &emsp;{ <br>
+                            &emsp;return 'Método estático'; <br>
+                            &emsp;} <br>
+
+                            &emsp;public function metodoNoEstatico() <br>
+                            &emsp;{ <br>
+                            &emsp;return 'Método no estático'; <br>
+                            &emsp;} <br>
+                            } <br>
+                            <br>
+                            echo MyClass::$propiedadEstatica . '&lt;br /&gt;'; <br>
+                            echo MyClass::metodoEstatico() . '&lt;br /&gt;'; <br>
+                            <br>
+                            $myClass = new MyClass(); <br>
+                            echo $myClass->$propiedadNoEstatica . '&lt;br /&gt;';<br>
+                            echo $myClass->metodoNoEstatico() . '&lt;br /&gt;'; <br>
+                            Ahora supongo que sentirás curiosidad por saber bien qué es eso de "estático" (static). También puede que te preguntes por qué uso MyClass con :: pero uso $myClass con ->. Por supuesto, está relacionado con static. <br>
+                            <br>
+                            Está bien, la curiosidad no es mala, te animo a seguir investigando por ti mismo. Pero además no olvides seguir el método de aprendizaje.
+                        </p>
+                        <ul class="comentario__box__pie">
+                            <li>
+                                <a href="https://es.stackoverflow.com/users/256843/jos%c3%a9-carlos-php">
+                                    José Carlos PHP
+                                </a>
+                            </li>
+                            <li>
+                                8:30 - 5/10/2022
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </article>
@@ -120,73 +165,134 @@
                 <div class="superior">
                     <div class="artForo">
                         <h2>
-                            Asunto
+                            Obtener propiedad de un objeto dentro de un array de objetos en Javascript
                         </h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non eros sed odio commodo aliquet et vitae mauris. Donec malesuada interdum lorem, a semper mauris efficitur a. Fusce ac arcu consequat, finibus massa vel, posuere odio. Phasellus at mi magna. Vestibulum commodo leo non nulla tincidunt pulvinar. Pellentesque dapibus egestas lacinia. Nunc hendrerit turpis sit amet odio mollis luctus. Vestibulum pharetra neque nunc, non pharetra risus ornare at. Curabitur id iaculis purus. Vivamus dapibus lorem non tortor luctus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum magna dolor, porttitor a laoreet eget, aliquam ut ipsum. Aliquam erat volutpat.
+                            <br>Tengo el siguiente json introducir la descripción de la imagen aquí
+                            <br><img src="https://i.stack.imgur.com/vbAAT.png" alt="Imagen del articulo">
+                            <br>lo converti a array con Object.values(this.ArrayUserAuth); y quedo de esta manera↓
+                            <br>
+                            <br>ArrayUserAuth = [
+                            <br>0:{avatar
+                            <br>: 
+                            <br>"https://reqres.in/img/faces/2-image.jpg"
+                            <br>email
+                            <br>: 
+                            <br>"janet.weaver@reqres.in"
+                            <br>first_name
+                            <br>: 
+                            <br>"Janet"
+                            <br>id
+                            <br>: 
+                            <br>2
+                            <br>last_name
+                            <br>: 
+                            <br>"Weaver"},
+                            <br>
+                            <br>1:{
+                            <br>text: "To keep ReqRes free, contributions towards server costs are appreciated!"
+                            <br>url: 
+                            <br>"https://reqres.in/#support-heading"}
+                            <br>]
+                            <br>Necesito acceder solo al objeto 0 y a el valor de la propiedad email. Intenté con for each o en template con *ngFor pero nada.
+
+                            <br>o puedo acceder desde el json original a dicho valor?
                         </p>
                     </div>
                     <div class="artImgs">
                         <div class="autor">
-                            <a href="#" class="amarillo">
-                                <img src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" class="rounded-circle" alt="Icono de usuario del autor del articulo">
-                                <br>Autor
+                            <a href="https://es.stackoverflow.com/users/288429/eduin-fabian-ardila-ruiz">
+                                <img src="https://lh3.googleusercontent.com/a-/AOh14GjftBfOIFejFkKcHOpPwojqcEeZi_w8AsugrPSyDg=k-s256" class="rounded-circle" alt="Icono de usuario del autor del articulo">
+                                <br>eduin fabian ardila ruiz
                             </a>
                         </div>
-                        <div class="artPrev">
-                            <img src="https://1000marcas.net/wp-content/uploads/2021/06/GNU-Logo.jpg" alt="Previsualización del articulo">
-                        </div>
+                        <img class="artPrev" src="https://i.stack.imgur.com/vbAAT.png" alt="Previsualización del articulo">
                     </div>
                 </div>
                 <div class="comentarios">
-                    <div class="comentario">
-                        Comentario 1 <br>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
-                    </div>
-                    <div class="comentario">
-                        Comentario 2 <br>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
-                    </div>
-                    <div class="comentario">
-                        Comentario 3 <br>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
-                    </div>
-                </div>
-            </article>
-            <article>
-                <div class="superior">
-                    <div class="artForo">
-                        <h2>
-                            Asunto
-                        </h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non eros sed odio commodo aliquet et vitae mauris. Donec malesuada interdum lorem, a semper mauris efficitur a. Fusce ac arcu consequat, finibus massa vel, posuere odio. Phasellus at mi magna. Vestibulum commodo leo non nulla tincidunt pulvinar. Pellentesque dapibus egestas lacinia. Nunc hendrerit turpis sit amet odio mollis luctus. Vestibulum pharetra neque nunc, non pharetra risus ornare at. Curabitur id iaculis purus. Vivamus dapibus lorem non tortor luctus mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum magna dolor, porttitor a laoreet eget, aliquam ut ipsum. Aliquam erat volutpat.
+                    <div class="comentario__box">
+                        <p class="comentario">
+                            Si deseas entrar al mismo por su propiedad en un objeto quedaría de la siguiente manera:
+                            <br>UserAuth = {
+                            <br>&emsp;    0: {
+                            <br>&emsp;&emsp;avatar: "https://reqres.in/img/faces/2-image.jpg",
+                            <br>&emsp;&emsp;  email: "janet.weaver@reqres.in",
+                            <br>&emsp;&emsp;first_name: "Janet",
+                            <br>&emsp;&emsp;id: 2,
+                            <br>&emsp;&emsp;last_name: "Weaver",
+                            <br>&emsp;},
+                            <br>&emsp;1: {
+                            <br>&emsp;&emsp;text: "To keep ReqRes free, contributions towards server costs are appreciated!",
+                            <br>&emsp;&emsp;url: "https://reqres.in/#support-heading",
+                            <br>&emsp;},
+                            <br>&emsp;};
+                            <br>
+                            <br>&emsp;console.log(UserAuth[0].email)
+                            <br>&emsp;//Se usa bracket notation para acceder al objeto por ser un numero la clave en este caso.
+                            <br>
+                            <br>&emsp;Otra opción podría ser tener un array e ingresar por su posición, entonces quedaría de la siguiente manera:
+                            <br>
+                            <br>&emsp;const ArrayUserAuth = [
+                            <br>&emsp;{
+                            <br>&emsp;&emsp;avatar: "https://reqres.in/img/faces/2-image.jpg",
+                            <br>&emsp;&emsp;email: "janet.weaver@reqres.in",
+                            <br>&emsp;&emsp;first_name: "Janet",
+                            <br>&emsp;&emsp;id: 2,
+                            <br>&emsp;&emsp;last_name: "Weaver",
+                            <br>&emsp;},
+                            <br>
+                            <br>&emsp;{
+                            <br>&emsp;&emsp;text: "To keep ReqRes free, contributions towards server costs are appreciated!",
+                            <br>&emsp;&emsp;url: "https://reqres.in/#support-heading",
+                            <br>&emsp;},
+                            <br>];
+                            <br>
+                            <br>console.log(ArrayUserAuth[0].email)
+                            
                         </p>
+                        <ul class="comentario__box__pie">
+                            <li>
+                                <a href="https://es.stackoverflow.com/users/218292/luis-s-romero">
+                                    Luis S. Romero
+                                </a>
+                            </li>
+                            <li>
+                                15:00 - 05/10/2022
+                            </li>
+                        </ul>
                     </div>
-                    <div class="artImgs">
-                        <div class="autor">
-                            <a href="#" class="amarillo">
-                                <img src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" class="rounded-circle" alt="Icono de usuario del autor del articulo">
-                                <br>Autor
-                            </a>
-                        </div>
-                        <div class="artPrev">
-                            <img src="https://1000marcas.net/wp-content/uploads/2021/06/GNU-Logo.jpg" alt="Previsualización del articulo">
-                        </div>
-                    </div>
-                </div>
-                <div class="comentarios">
-                    <div class="comentario">
-                        Comentario 1 <br>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
-                    </div>
-                    <div class="comentario">
-                        Comentario 2 <br>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
-                    </div>
-                    <div class="comentario">
-                        Comentario 3 <br>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum deserunt accusantium repudiandae assumenda voluptatum possimus natus, reiciendis obcaecati adipisci eius cumque ab minima aut cum architecto explicabo atque ipsa voluptate!
+                    <div class="comentario__box">
+                        <p class="comentario">
+                            <br>Podrías almacenar los objetos en una constante y luego acceder a ella:
+                            <br>// Definimos al objeto en una constante.
+                            <br>const ArrayUserAuth = {
+                            <br>0: {
+                            <br>&emsp;    avatar: 'https://reqres.in/img/faces/2-image.jpg',
+                            <br>&emsp;    email: 'janet.weaver@reqres.in',
+                            <br>&emsp;    first_name: 'Janet',
+                            <br>&emsp;    id: 2,
+                            <br>&emsp;    last_name: 'Weaver',
+                            <br>},
+                            <br>
+                            <br>1: {
+                            <br>&emsp;    text: 'To keep ReqRes free, contributions towards server costs are appreciated!',
+                            <br>&emsp;    url: 'https://reqres.in/#support-heading',
+                            <br>},
+                            <br>};
+                            <br>
+                            <br>// Ingresamos al objeto, de la posición 0, la propiedad email.
+                            <br>console.log(ArrayUserAuth[0].email)
+                        </p>
+                        <ul class="comentario__box__pie">
+                            <li>
+                                <a href="https://es.stackoverflow.com/users/262104/cris223511-dev">
+                                    Cris223511.dev
+                                </a>
+                            </li>
+                            <li>
+                                15:00 - 05/10/2022
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </article>
