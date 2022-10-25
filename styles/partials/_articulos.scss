@@ -1,4 +1,48 @@
 .arts{
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+
+    .Filtros{
+        position: fixed;
+        margin-top: 23vw;
+        display: flex;
+        font-size: $fuente;
+        .refinar{
+            background-color: $colorFondoBox;
+            border: $bordeEstilo;
+            border-color: $bordeColor;
+            width: 60vw;
+            padding: 1%;
+
+            div{
+                color: black;
+                option{
+                    color: black;
+                }
+            }
+        }
+
+        button{
+            width: 4vw;
+            color: black;
+        }
+
+        transform: translateX(-60vw);
+        transition: all 1s;
+
+        &:hover{
+            transform: translateX(0vw);
+        }
+    }
+
+    main{
+        grid-area: main;
+        padding: 3vw;
+    }
+
     article{
         display: flex;
         flex-direction: row;
@@ -6,6 +50,7 @@
         border: $bordeEstilo;
         border-color: $bordeColor;
         width: 95vw;
+        height: 40vw;
 
         .art{
             height: 200px;
@@ -28,12 +73,12 @@
                 align-items: center;
     
                 img{
-                    width: 50px;
+                    width: 10vw;
                 }
             }
             
             img{
-                width: 100px;
+                width: 15vw;
             }
         }
     }

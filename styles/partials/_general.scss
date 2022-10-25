@@ -10,8 +10,8 @@ body{
 }
 
 a{
-    text-decoration: none;
     color: yellow;
+    text-decoration: underline;
 }
 
 li{
@@ -20,6 +20,7 @@ li{
 
 main{
     text-align: justify;
+    font-size: $fuente;
     a{
         &:visited{
             color: $visitedLinks;
@@ -27,12 +28,12 @@ main{
     }
 }
 
-@media screen and (min-width: 992px) {
+@media (min-width: $sm) {
     .linkDeNavegacion{
         transition: all 1s;
 
         &:hover{
-            scale: 1.1;
+            transform: scale(1.1);
         }
         
         a{

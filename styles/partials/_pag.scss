@@ -1,13 +1,12 @@
 .pag{
     display: block;
     grid-area: pag;
-    height: fit-content;
     padding: 5%;
     background-color: $colorFondoBox;
     
     h1{
         text-align: center;
-        font-size: x-large;
+        font-size: $fuente*1.5;
     }
 
     ul{
@@ -17,9 +16,9 @@
         li{
             margin: 1%;
             list-style: disc;
-            font-size: x-large;
 
             a{
+                font-size: $fuente*1.5;
                 &:visited{
                     color: $visitedLinks;
                 }

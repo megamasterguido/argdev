@@ -78,6 +78,32 @@
                 </div>
             </nav>
         </header>
+        <div class="Filtros">
+            <div class="refinar">
+                <h2>Filtrar por</h2>
+                <div>
+                    <label for="foroFechaInicio">Desde</label>
+                    <input type="date" id="foroFechaInicio">
+                </div>
+                <div>
+                    <label for="foroFechaFinal">Hasta</label>
+                    <input type="date" id="foroFechaFinal">
+                </div>
+                <div>
+                    <label for="foroConRespuestas">Con respuestas</label>
+                    <input type="checkbox" id="foroConRespuestas">
+                </div>
+                <div>
+                    <label for="foroOrden">Ordenar por</label>
+                    <select name="orden" id="foroOrden">
+                        <option value="Reciente">Mas reciente primero</option>
+                        <option value="Antiguo">Mas antiguo primero</option>
+                        <option value="Popular">Mas respuestas</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button">>></button>
+        </div>
         <main>
             <article>
                 <div class="superior">

@@ -1,22 +1,23 @@
 footer{
     grid-area: footer;
     background-color: $colorFondoBox;
+    font-size: $fuente*1.2;
 
     ul{
         display: list-item;
         padding-inline: 1%;
         column-count: 2;
-        font-size: larger;
     }
 
     a{
+        text-decoration: none;
         &:visited{
             color: $visitedLinks;
         }
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: $sm) {
 
     footer{
         ul{
@@ -26,7 +27,6 @@ footer{
             padding-inline: 1%;
             align-items: center;
             height: 40px;
-            font-size: 20px;
         }
     }
 }

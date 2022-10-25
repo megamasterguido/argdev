@@ -14,7 +14,18 @@
             overflow: hidden;
         }
     }
-    
+
+    .volverArriba{
+        display: block;
+        position: fixed;
+        bottom: 15vw;
+        right: 5vw;
+        background-color: $colorFondoBox;
+
+        img{
+            width: 64px;
+        }
+    }
 }
 
 

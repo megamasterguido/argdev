@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Articulos</title>
     </head>
-    <body class="index">
+    <body class="arts">
         <header>
             <nav>
                 <a href="index.html">
@@ -78,7 +78,28 @@
                 </div>
             </nav>
         </header>
-        <main class="arts">
+        <div class="Filtros">
+            <div class="refinar">
+                <h2>Filtrar por</h2>
+                <div>
+                    <label for="artFechaInicio">Desde</label>
+                    <input type="date" id="artFechaInicio">
+                </div>
+                <div>
+                    <label for="artFechaFinal">Hasta</label>
+                    <input type="date" id="artFechaFinal">
+                </div>
+                <div>
+                    <label for="artOrden">Ordenar por</label>
+                    <select name="orden" id="artOrden">
+                        <option value="Reciente">Mas reciente primero</option>
+                        <option value="Antiguo">Mas antiguo primero</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button">>></button>
+        </div>
+        <main>
             <article>
                 <div class="art">
                     <h2>

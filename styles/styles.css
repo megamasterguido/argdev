@@ -10,8 +10,8 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: yellow;
+  text-decoration: underline;
 }
 
 li {
@@ -20,17 +20,18 @@ li {
 
 main {
   text-align: justify;
+  font-size: 4vw;
 }
 main a:visited {
-  color: red;
+  color: purple;
 }
 
-@media screen and (min-width: 992px) {
+@media (min-width: 576px) {
   .linkDeNavegacion {
     transition: all 1s;
   }
   .linkDeNavegacion:hover {
-    scale: 1.1;
+    transform: scale(1.1);
   }
   .linkDeNavegacion a {
     color: yellow;
@@ -83,8 +84,11 @@ nav .logo:active {
   transition: all 1s;
   font-size: 0px;
 }
+.navMobile .navMobile__menu__desplegable li a {
+  text-decoration: none;
+}
 .navMobile:hover .navMobile__menu__desplegable li {
-  font-size: 40px;
+  font-size: 7vw;
 }
 .navMobile:hover ~ .busqueda .busqueda__box {
   width: 50%;
@@ -94,8 +98,8 @@ nav .logo:active {
   display: block;
   width: 100px;
   height: 80px;
+  font-size: 4vw;
   background-color: gray;
-  font-size: 28px;
   color: black;
   font-weight: bolder;
   border: solid;
@@ -112,8 +116,9 @@ nav .logo:active {
 }
 .busqueda .busqueda__box {
   height: 50px;
+  width: 220px;
   background-color: none;
-  font-size: 18px;
+  font-size: 24px;
   color: black;
 }
 .busqueda .busqueda__icono {
@@ -123,7 +128,7 @@ nav .logo:active {
   width: 50px;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 576px) {
   .navMobile {
     display: none;
   }
@@ -136,26 +141,28 @@ nav .logo:active {
     flex-direction: row;
   }
   .navPC ul li {
-    font-size: 28px;
     padding: 15px;
   }
 }
 footer {
   grid-area: footer;
   background-color: gray;
+  font-size: 4.8vw;
 }
 footer ul {
   display: list-item;
   padding-inline: 1%;
   -moz-column-count: 2;
        column-count: 2;
-  font-size: larger;
+}
+footer a {
+  text-decoration: none;
 }
 footer a:visited {
-  color: red;
+  color: purple;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 576px) {
   footer ul {
     display: flex;
     flex-direction: row;
@@ -163,7 +170,6 @@ footer a:visited {
     padding-inline: 1%;
     align-items: center;
     height: 40px;
-    font-size: 20px;
   }
 }
 .index {
@@ -177,6 +183,16 @@ footer a:visited {
   margin: 2%;
   height: 100px;
   overflow: hidden;
+}
+.index .volverArriba {
+  display: block;
+  position: fixed;
+  bottom: 15vw;
+  right: 5vw;
+  background-color: gray;
+}
+.index .volverArriba img {
+  width: 64px;
 }
 
 @media screen and (min-width: 992px) {
@@ -193,15 +209,12 @@ footer a:visited {
 .pag {
   display: block;
   grid-area: pag;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   padding: 5%;
   background-color: gray;
 }
 .pag h1 {
   text-align: center;
-  font-size: x-large;
+  font-size: 6vw;
 }
 .pag ul {
   display: flex;
@@ -210,10 +223,12 @@ footer a:visited {
 .pag ul li {
   margin: 1%;
   list-style: disc;
-  font-size: x-large;
+}
+.pag ul li a {
+  font-size: 6vw;
 }
 .pag ul li a:visited {
-  color: red;
+  color: purple;
 }
 
 @media screen and (min-width: 992px) {
@@ -229,6 +244,42 @@ footer a:visited {
     transform: scale(1.1, 1.1);
   }
 }
+.arts {
+  display: grid;
+  grid-template-areas: "nav" "main" "footer";
+}
+.arts .Filtros {
+  position: fixed;
+  margin-top: 23vw;
+  display: flex;
+  font-size: 4vw;
+  transform: translateX(-60vw);
+  transition: all 1s;
+}
+.arts .Filtros .refinar {
+  background-color: gray;
+  border: dotted;
+  border-color: darkgray;
+  width: 60vw;
+  padding: 1%;
+}
+.arts .Filtros .refinar div {
+  color: black;
+}
+.arts .Filtros .refinar div option {
+  color: black;
+}
+.arts .Filtros button {
+  width: 4vw;
+  color: black;
+}
+.arts .Filtros:hover {
+  transform: translateX(0vw);
+}
+.arts main {
+  grid-area: main;
+  padding: 3vw;
+}
 .arts article {
   display: flex;
   flex-direction: row;
@@ -236,6 +287,7 @@ footer a:visited {
   border: dotted;
   border-color: darkgray;
   width: 95vw;
+  height: 40vw;
 }
 .arts article .art {
   height: 200px;
@@ -256,16 +308,47 @@ footer a:visited {
   align-items: center;
 }
 .arts article .imgs .autor img {
-  width: 50px;
+  width: 10vw;
 }
 .arts article .imgs img {
-  width: 100px;
+  width: 15vw;
 }
 
 .foro {
   background-color: rgb(30, 30, 30);
   display: grid;
   grid-template-areas: "nav" "main" "footer";
+}
+.foro main {
+  grid: main;
+}
+.foro .Filtros {
+  position: fixed;
+  margin-top: 23vw;
+  display: flex;
+  font-size: 4vw;
+  transform: translateX(-60vw);
+  transition: all 1s;
+}
+.foro .Filtros .refinar {
+  background-color: gray;
+  border: dotted;
+  border-color: darkgray;
+  width: 60vw;
+  padding: 1%;
+}
+.foro .Filtros .refinar div {
+  color: black;
+}
+.foro .Filtros .refinar div option {
+  color: black;
+}
+.foro .Filtros button {
+  width: 4vw;
+  color: black;
+}
+.foro .Filtros:hover {
+  transform: translateX(0vw);
 }
 .foro article {
   display: flex;
@@ -292,7 +375,6 @@ footer a:visited {
 }
 .foro .comentarios {
   display: block;
-  text-justify: distribute;
   height: 100px;
   overflow-y: scroll;
   border: dotted;
@@ -302,6 +384,9 @@ footer a:visited {
   padding: 1%;
   border-bottom: dotted;
   border-color: darkgray;
+}
+.foro .comentarios .comentario__box p {
+  font-size: 3.6vw;
 }
 .foro .comentarios .comentario__box .comentario__box__pie {
   display: flex;
@@ -360,14 +445,18 @@ footer a:visited {
   grid-template-areas: "nav" "main" "footer";
 }
 .acerca main {
+  grid-area: main;
   display: flex;
   flex-direction: column;
+  padding: 4%;
 }
 .acerca main .fila1 {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .acerca main .fila1 iframe {
+  margin: 4%;
   width: 400px;
   height: 300px;
 }
@@ -375,39 +464,59 @@ footer a:visited {
   display: flex;
   flex-direction: row;
 }
-.acerca main .fila2 img {
-  width: 200px;
+.acerca main .fila2 div {
+  display: flex;
+  flex-direction: column;
+  margin: 4%;
+}
+.acerca main .fila2 div img {
+  width: 30vw;
 }
 
 .pagContacto {
   display: grid;
-  grid-template-areas: "nav" "main" "footer";
+  grid-template-areas: "nav" "arriba" "medio" "abajo" "footer";
 }
 .pagContacto main {
-  grid-area: "main";
   padding: 2%;
 }
 .pagContacto main form {
   display: flex;
   flex-direction: column;
 }
-.pagContacto main form .izq {
+.pagContacto main form .arriba {
   display: flex;
+  grid-area: "arriba";
   margin: 2%;
+  width: 85vw;
+  justify-content: space-between;
 }
-.pagContacto main form .izq div {
+.pagContacto main form .arriba div {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin: 2%;
+  width: 60vw;
 }
-.pagContacto main form .der textarea {
+.pagContacto main form .arriba div input {
+  color: black;
+}
+.pagContacto main form .arriba img {
+  width: 20vw;
+}
+.pagContacto main form textarea {
+  grid-area: "medio";
   padding: 2%;
   color: black;
   width: 100%;
   height: 500px;
   overflow-y: scroll;
 }
-.pagContacto main form .der input {
+.pagContacto main form .abajo {
+  grid-area: "abajo";
+  display: flex;
+  justify-content: space-between;
+}
+.pagContacto main form .abajo input {
   color: black;
 }/*# sourceMappingURL=styles.css.map */

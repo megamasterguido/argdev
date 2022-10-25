@@ -6,6 +6,43 @@
     "main"
     "footer";
 
+    main{
+        grid: main;
+    }
+
+    .Filtros{
+        position: fixed;
+        margin-top: 23vw;
+        display: flex;
+        font-size: $fuente;
+        .refinar{
+            background-color: $colorFondoBox;
+            border: $bordeEstilo;
+            border-color: $bordeColor;
+            width: 60vw;
+            padding: 1%;
+
+            div{
+                color: black;
+                option{
+                    color: black;
+                }
+            }
+        }
+
+        button{
+            width: 4vw;
+            color: black;
+        }
+
+        transform: translateX(-60vw);
+        transition: all 1s;
+
+        &:hover{
+            transform: translateX(0vw);
+        }
+    }
+
     article{
         display: flex;
         flex-direction: column;
@@ -35,7 +72,6 @@
 
     .comentarios{
         display: block;
-        text-justify: distribute;
         height: 100px;
         overflow-y: scroll;
         border: $bordeEstilo;
@@ -45,6 +81,11 @@
             padding: 1%;
             border-bottom: $bordeEstilo;
             border-color: $bordeColor;
+
+            p{
+                font-size: $fuente*0.9;               
+            }
+
             .comentario__box__pie{
                 display: flex;
                 justify-content: end;
