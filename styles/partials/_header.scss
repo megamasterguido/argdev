@@ -18,7 +18,7 @@ nav{
     left: 0;
 
     .logo{
-        width: 120px;
+        width: 22vw;
         &:active{
             background-color: lightgray;
         }
@@ -35,8 +35,6 @@ nav{
     .navMobile__menu__desplegable{
         display: block;
         background-color: $colorFondoBox;
-        top: 100px;
-        left: 0;
         li{
             margin-top: 5%;
             transition: all 1s;
@@ -57,7 +55,7 @@ nav{
 
     &:hover ~.busqueda{
         .busqueda__box{
-            width: 50%;
+            width: 20vw;
         }
     }
 
@@ -65,9 +63,9 @@ nav{
 
 .navMobile__menu__boton{
     display: block;
-    width: 100px;
-    height: 80px;
-    font-size: $fuente;
+    width: 20vw;
+    height: 15vw;
+    font-size: 5vw;
     background-color: $colorFondoBox;
     color: black;
     font-weight: bolder;
@@ -84,37 +82,63 @@ nav{
     align-items: center;
     
     .busqueda__box{
-        height: 50px;
-        width: 220px;
+        height: 11vw;
+        width: 40vw;
         background-color: none;
-        font-size: 24px;
+        font-size: 5vw;
         color: black;
     }
     
     .busqueda__icono{
         padding: 5%;
         img{
-            width: 50px;
+            width: 8vw;
         }
     }
 }
 
-@media screen and (min-width: $sm) {
+@media screen and (orientation: landscape) {
 
     .navMobile{
         display: none;
     }
 
-    .navPC{
-        display: flex;
-        flex-direction: row;
+    nav{
 
-        ul{
+        .logo{
+            width: 10vw;
+        }
+
+        .busqueda{
+            .busqueda__box{
+                font-size: 2.3vw;
+                height: 6vw;
+                width: 14vw;
+            }
+            .busqueda__icono{
+                img{
+                    width: 3vw;
+                }
+            }
+        }
+        .navPC{
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
 
-            li{
-                padding: 15px;
+            ul{
+                display: flex;
+                flex-direction: row;
+
+                li{
+                    padding: 1vw;
+                    font-size: 2.3vw;
+
+                    a{
+                        
+                        text-decoration: none; 
+                    }
+                }
             }
         }
     }

@@ -26,7 +26,10 @@ main a:visited {
   color: purple;
 }
 
-@media (min-width: 576px) {
+@media (orientation: landscape) {
+  main {
+    font-size: 2vw;
+  }
   .linkDeNavegacion {
     transition: all 1s;
   }
@@ -59,7 +62,7 @@ nav {
   left: 0;
 }
 nav .logo {
-  width: 120px;
+  width: 22vw;
 }
 nav .logo:active {
   background-color: lightgray;
@@ -76,8 +79,6 @@ nav .logo:active {
 .navMobile .navMobile__menu__desplegable {
   display: block;
   background-color: gray;
-  top: 100px;
-  left: 0;
 }
 .navMobile .navMobile__menu__desplegable li {
   margin-top: 5%;
@@ -91,14 +92,14 @@ nav .logo:active {
   font-size: 7vw;
 }
 .navMobile:hover ~ .busqueda .busqueda__box {
-  width: 50%;
+  width: 20vw;
 }
 
 .navMobile__menu__boton {
   display: block;
-  width: 100px;
-  height: 80px;
-  font-size: 4vw;
+  width: 20vw;
+  height: 15vw;
+  font-size: 5vw;
   background-color: gray;
   color: black;
   font-weight: bolder;
@@ -115,33 +116,49 @@ nav .logo:active {
   align-items: center;
 }
 .busqueda .busqueda__box {
-  height: 50px;
-  width: 220px;
+  height: 11vw;
+  width: 40vw;
   background-color: none;
-  font-size: 24px;
+  font-size: 5vw;
   color: black;
 }
 .busqueda .busqueda__icono {
   padding: 5%;
 }
 .busqueda .busqueda__icono img {
-  width: 50px;
+  width: 8vw;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (orientation: landscape) {
   .navMobile {
     display: none;
   }
-  .navPC {
+  nav .logo {
+    width: 10vw;
+  }
+  nav .busqueda .busqueda__box {
+    font-size: 2.3vw;
+    height: 6vw;
+    width: 14vw;
+  }
+  nav .busqueda .busqueda__icono img {
+    width: 3vw;
+  }
+  nav .navPC {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav .navPC ul {
     display: flex;
     flex-direction: row;
   }
-  .navPC ul {
-    display: flex;
-    flex-direction: row;
+  nav .navPC ul li {
+    padding: 1vw;
+    font-size: 2.3vw;
   }
-  .navPC ul li {
-    padding: 15px;
+  nav .navPC ul li a {
+    text-decoration: none;
   }
 }
 footer {
@@ -162,14 +179,15 @@ footer a:visited {
   color: purple;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (orientation: landscape) {
   footer ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding-inline: 1%;
     align-items: center;
-    height: 40px;
+    height: 7vw;
+    font-size: 3vw;
   }
 }
 .index {
@@ -179,9 +197,18 @@ footer a:visited {
 .index main {
   margin: 2%;
 }
+.index main h2 {
+  font-size: 6vw;
+}
+.index main h3 {
+  font-size: 4.8vw;
+}
+.index main section {
+  margin-top: 10vw;
+}
 .index main article {
-  margin: 2%;
-  height: 100px;
+  margin: 3vw;
+  height: 25vw;
   overflow: hidden;
 }
 .index .volverArriba {
@@ -192,18 +219,35 @@ footer a:visited {
   background-color: gray;
 }
 .index .volverArriba img {
-  width: 64px;
+  width: 10vw;
 }
 
-@media screen and (min-width: 992px) {
+@media (orientation: landscape) {
   .index {
     grid-template-areas: "nav nav" "main pag" "footer footer";
   }
   .index main {
     margin: 1%;
   }
+  .index main h2 {
+    font-size: 3vw;
+  }
+  .index main h3 {
+    font-size: 2.4vw;
+  }
+  .index main section {
+    margin-top: 2vw;
+  }
   .index main article {
-    margin: 1%;
+    margin-top: 2vw;
+    height: 15vw;
+  }
+  .index .volverArriba {
+    bottom: 7vw;
+    right: 5vw;
+  }
+  .index .volverArriba img {
+    width: 5vw;
   }
 }
 .pag {
@@ -231,16 +275,29 @@ footer a:visited {
   color: purple;
 }
 
-@media screen and (min-width: 992px) {
+@media (orientation: landscape) {
   .pag {
     margin: 1%;
     padding: 15%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
-  .pag li {
+  .pag h1 {
+    text-align: center;
+    font-size: 3vw;
+  }
+  .pag ul li {
     transition: transform 0.5s;
     padding: 5%;
   }
-  .pag li:hover {
+  .pag ul li a {
+    font-size: 2vw;
+  }
+  .pag ul li a:visited {
+    color: purple;
+  }
+  .pag ul li:hover {
     transform: scale(1.1, 1.1);
   }
 }
@@ -290,7 +347,6 @@ footer a:visited {
   height: 40vw;
 }
 .arts article .art {
-  height: 200px;
   padding-inline: 2%;
 }
 .arts article .art h2 {
@@ -314,6 +370,26 @@ footer a:visited {
   width: 15vw;
 }
 
+@media (orientation: landscape) {
+  .arts main article .art {
+    font-size: 2vw;
+  }
+  .arts .Filtros {
+    margin-top: 11vw;
+    font-size: 2vw;
+    transform: translateX(-35vw);
+  }
+  .arts .Filtros .refinar {
+    width: 35vw;
+    padding: 1%;
+  }
+  .arts .Filtros .refinar div {
+    color: black;
+  }
+  .arts .Filtros .refinar div option {
+    color: black;
+  }
+}
 .foro {
   background-color: rgb(30, 30, 30);
   display: grid;
@@ -367,15 +443,18 @@ footer a:visited {
   flex-direction: column;
   margin: 1%;
   padding: 1%;
-  height: 200px;
+  height: 50vw;
   overflow-y: scroll;
 }
+.foro article .superior .artForo h2 {
+  font-size: 6vw;
+}
 .foro article .superior .artForo img {
-  max-width: 300px;
+  max-width: 60vw;
 }
 .foro .comentarios {
   display: block;
-  height: 100px;
+  height: 20vw;
   overflow-y: scroll;
   border: dotted;
   border-color: darkgray;
@@ -408,20 +487,23 @@ footer a:visited {
   text-align: center;
 }
 .foro .artImgs .autor a img {
-  width: 60px;
+  width: 10vw;
   border: dotted;
   border-color: darkgray;
 }
 .foro .artImgs .artPrev {
   border: dotted;
   border-color: darkgray;
-  height: 100px;
-  width: 150px;
+  height: 20vw;
+  width: 30vw;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (orientation: landscape) {
   .foro {
     grid-template-areas: "nav" "main" "footer";
+  }
+  .foro article .superior .artForo h2 {
+    font-size: 3vw;
   }
   .foro article .superior .artForo img {
     max-width: 700px;
@@ -438,6 +520,24 @@ footer a:visited {
   .foro .artImgs .artPrev {
     height: 200px;
     width: 300px;
+  }
+  .foro .comentarios .comentario__box p {
+    font-size: 1.8vw;
+  }
+  .foro .Filtros {
+    margin-top: 11vw;
+    font-size: 2vw;
+    transform: translateX(-35vw);
+  }
+  .foro .Filtros .refinar {
+    width: 35vw;
+    padding: 1%;
+  }
+  .foro .Filtros .refinar div {
+    color: black;
+  }
+  .foro .Filtros .refinar div option {
+    color: black;
   }
 }
 .acerca {
@@ -499,6 +599,7 @@ footer a:visited {
   width: 60vw;
 }
 .pagContacto main form .arriba div input {
+  margin-bottom: 2vw;
   color: black;
 }
 .pagContacto main form .arriba img {
@@ -509,8 +610,9 @@ footer a:visited {
   padding: 2%;
   color: black;
   width: 100%;
-  height: 500px;
+  height: 50vw;
   overflow-y: scroll;
+  margin-bottom: 2vw;
 }
 .pagContacto main form .abajo {
   grid-area: "abajo";
@@ -519,4 +621,10 @@ footer a:visited {
 }
 .pagContacto main form .abajo input {
   color: black;
+}
+
+@media (orientation: landscape) {
+  .pagContacto form div input {
+    font-size: 2vw;
+  }
 }/*# sourceMappingURL=styles.css.map */

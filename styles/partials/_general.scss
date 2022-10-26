@@ -20,7 +20,7 @@ li{
 
 main{
     text-align: justify;
-    font-size: $fuente;
+    font-size: $fuenteP;
     a{
         &:visited{
             color: $visitedLinks;
@@ -28,7 +28,12 @@ main{
     }
 }
 
-@media (min-width: $sm) {
+@media (orientation: landscape) {
+
+    main{
+        font-size: $fuenteL;
+    }
+
     .linkDeNavegacion{
         transition: all 1s;
 

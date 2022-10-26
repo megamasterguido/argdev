@@ -14,7 +14,7 @@
         position: fixed;
         margin-top: 23vw;
         display: flex;
-        font-size: $fuente;
+        font-size: $fuenteP;
         .refinar{
             background-color: $colorFondoBox;
             border: $bordeEstilo;
@@ -60,11 +60,14 @@
                 flex-direction: column;
                 margin: 1%;
                 padding: 1%;
-                height: 200px;
+                height: 50vw;
                 overflow-y: scroll;
+                h2{
+                    font-size: 1.5*$fuenteP;
+                }
 
                 img{
-                    max-width: 300px;
+                    max-width: 60vw;
                 }
             }
         }
@@ -72,7 +75,7 @@
 
     .comentarios{
         display: block;
-        height: 100px;
+        height: 20vw;
         overflow-y: scroll;
         border: $bordeEstilo;
         border-color: $bordeColor;
@@ -83,7 +86,7 @@
             border-color: $bordeColor;
 
             p{
-                font-size: $fuente*0.9;               
+                font-size: $fuenteP*0.9;               
             }
 
             .comentario__box__pie{
@@ -110,7 +113,7 @@
             text-align: center;
             a{
                 img{
-                    width: 60px;
+                    width: 10vw;
                     border: $bordeEstilo;
                     border-color: $bordeColor;
                 }}
@@ -119,13 +122,13 @@
         .artPrev{
             border: $bordeEstilo;
             border-color: $bordeColor;
-            height: 100px;
-            width: 150px;
+            height: 20vw;
+            width: 30vw;
         }
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (orientation: landscape) {
     .foro{
         grid-template-areas: 
         "nav"
@@ -135,6 +138,9 @@
         article{
             .superior{
                 .artForo{
+                    h2{
+                        font-size: 1.5*$fuenteL;
+                    }
                     img{
                         max-width: 700px;
                     }
@@ -157,6 +163,30 @@
                 height: 200px;
                 width: 300px;
             }
+        }
+
+        .comentarios{
+            .comentario__box{    
+                p{
+                    font-size: $fuenteL*0.9;               
+                }
+            }
+        }
+        .Filtros{
+            margin-top: 11vw;
+            font-size: $fuenteL;
+            .refinar{
+                width: 35vw;
+                padding: 1%;
+    
+                div{
+                    color: black;
+                    option{
+                        color: black;
+                    }
+                }
+            }
+            transform: translateX(-35vw);
         }
     }
 }

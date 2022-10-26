@@ -6,7 +6,7 @@
     
     h1{
         text-align: center;
-        font-size: $fuente*1.5;
+        font-size: $fuenteP*1.5;
     }
 
     ul{
@@ -18,7 +18,7 @@
             list-style: disc;
 
             a{
-                font-size: $fuente*1.5;
+                font-size: $fuenteP*1.5;
                 &:visited{
                     color: $visitedLinks;
                 }
@@ -27,17 +27,33 @@
     }
 }
 
-@media screen and (min-width: 992px) {
+@media (orientation: landscape) {
     .pag{
         margin: 1%;
         padding: 15%;
-        
-        li{
-            transition: transform 0.5s;
-            padding: 5%;
+        height: fit-content;
 
-            &:hover{
-                transform: scale(1.1, 1.1);
+        h1{
+            text-align: center;
+            font-size: $fuenteL*1.5;
+        }
+        
+        ul{
+            li{
+                transition: transform 0.5s;
+                padding: 5%;
+
+                a{
+                    font-size: $fuenteL;
+
+                    &:visited{
+                        color: $visitedLinks;
+                    }
+                }
+
+                &:hover{
+                    transform: scale(1.1, 1.1);
+                }
             }
         }
     }

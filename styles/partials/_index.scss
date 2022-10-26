@@ -8,9 +8,21 @@
 
     main{
         margin: 2%;
+        h2{
+            font-size: 1.5*$fuenteP;
+        }
+
+        h3{
+            font-size: 1.2*$fuenteP;
+        }
+
+        section{
+            margin-top: 10vw;
+        }
+
         article{
-            margin: 2%;
-            height: 100px;
+            margin: 3vw;
+            height: 25vw;
             overflow: hidden;
         }
     }
@@ -23,13 +35,13 @@
         background-color: $colorFondoBox;
 
         img{
-            width: 64px;
+            width: 10vw;
         }
     }
 }
 
 
-@media screen and (min-width: 992px) {
+@media (orientation: landscape){
     .index{
         grid-template-areas: 
         'nav nav'
@@ -38,10 +50,33 @@
             
         main{
             margin: 1%;
+
+            h2{
+                font-size: 1.5*$fuenteL;
+            }
+    
+            h3{
+                font-size: 1.2*$fuenteL;
+            }
+
+            section{
+                margin-top: 2vw;
+            }
             
             article{
-                margin: 1%;
+                margin-top: 2vw;
+                height: 15vw;
             }
         }
-    }
+
+        .volverArriba{
+            bottom: 7vw;
+            right: 5vw;
+    
+            img{
+                width: 5vw;
+            }
+        }
+    }    
+    
 }
